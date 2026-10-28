@@ -1,0 +1,33 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="CalcolatoreFigure.MainWindow"
+        Title="Calcolatore di Figure">
+
+    <StackPanel Margin="20" Spacing="10">
+        <TextBlock Text="Scegli la figura:" FontWeight="Bold"/>
+        
+        <ComboBox Name="CmbFigura" SelectedIndex="0" SelectionChanged="CmbFigura_SelectionChanged">
+            <ComboBoxItem>Rettangolo</ComboBoxItem>
+            <ComboBoxItem>Quadrato</ComboBoxItem>
+            <ComboBoxItem>Cerchio</ComboBoxItem>
+        </ComboBox>
+        
+        <TextBlock Name="LblMisura1" Text="Base:"/>
+        <TextBox Name="TxtMisura1"/>
+
+        <TextBlock Name="LblMisura2" Text="Altezza:"/>
+        <TextBox Name="TxtMisura2"/>
+
+        <Button Name="BtnCalcola" Content="Calcola" Click="BtnCalcola_Click"/>
+
+        <TextBlock Text="Risultato:" FontWeight="Bold"/>
+        
+        <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="10" Padding="10" Background="#FFF0F0F0">
+            <TextBlock Name="TxtRisultato" Text="Inserisci i dati e premi calcola" TextWrapping="Wrap"/>
+        </Border>
+    </StackPanel>
+
+</Window>
